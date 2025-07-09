@@ -74,7 +74,6 @@ public class UsuarioConverter {
                 .telefones(paraListaTelefonesDTO(usuarioDTO.getTelefones())) // Converte a lista de Telefone para TelefoneDTO
                 .build(); // Cria o objeto UsuarioDTO usando o padrão Builder
     }
-
     // Converte uma lista de objetos Endereco em uma lista de EnderecoDTO
     public List<EnderecoDTO> paraListaEnderecoDTO(List<Endereco> enderecoDTOS){
         List<EnderecoDTO> enderecos = new ArrayList<>();
