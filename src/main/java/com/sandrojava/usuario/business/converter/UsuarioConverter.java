@@ -109,5 +109,15 @@ public class UsuarioConverter {
                 .ddd(telefoneDTO.getDdd()) // Copia o DDD
                 .build(); // Cria o TelefoneDTO com os dados copiados
     }
-
+ //metodo de update
+    public Usuario updateUsuario (UsuarioDTO usuarioDTO, Usuario entity){
+        return Usuario.builder()
+                .nome(usuarioDTO.getNome() != null ? usuarioDTO.getNome() : entity.getNome())
+                .id(entity.getId())
+                .senha(usuarioDTO.getSenha() != null ? usuarioDTO.getSenha() : entity.getSenha())
+                .email(usuarioDTO.getEmail() != null ? usuarioDTO.getEmail() : entity.getEmail())
+                .enderecos(entity.getEnderecos())
+                .telefones(entity.getTelefones())
+                .build();
+    }
 }
